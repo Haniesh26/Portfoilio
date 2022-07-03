@@ -18,7 +18,6 @@ html {
 
 /* section 1 */
 .section1 {
-  margin-top: 4rem;
   padding-top: 3rem;
   width: 100%;
   height: 100vh;
@@ -362,7 +361,21 @@ i {
 }
 /* section6 ends */
 
+@media (max-width: 1400px) {
+  .section1 {
+    padding-top: 6rem;
+  }
+  .section1-heading {
+    font-size: 5rem;
+  }
+}
 @media (max-width: 1200px) {
+  .section1 {
+    padding-top: 10rem;
+  }
+  .section1-heading {
+    font-size: 5rem;
+  }
   .service-text {
     width: 50%;
     font-size: 2rem;
