@@ -451,12 +451,12 @@ i {
   .navbar {
     justify-content: space-between;
 
-    height: 7rem;
+    height: 5rem;
   }
   .navbar-link {
     margin: 0 1rem;
     padding: 0rem 2rem;
-    font-size: 1.9rem;
+    font-size: 1rem;
   }
   .person-img {
     width: 30rem;
@@ -538,7 +538,7 @@ i {
   .navbar-link {
     margin: 0 0rem;
     padding: 0rem 1rem;
-    font-size: 0.81rem;
+    font-size: 1rem;
     font-weight: 700;
   }
 
