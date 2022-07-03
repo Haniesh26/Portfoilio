@@ -450,13 +450,13 @@ i {
   }
   .navbar {
     justify-content: space-between;
-    padding: 0;
-    height: 5rem;
+
+    height: 7rem;
   }
   .navbar-link {
     margin: 0 1rem;
     padding: 0rem 2rem;
-    font-size: 1rem;
+    font-size: 1.9rem;
   }
   .person-img {
     width: 30rem;
@@ -478,7 +478,6 @@ i {
     justify-content: space-between;
   }
   .section1 {
-    margin-top: 4rem;
     padding-top: 8rem;
     width: 100%;
     height: 100vh;
