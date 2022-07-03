@@ -18,16 +18,17 @@ html {
 
 /* section 1 */
 .section1 {
-  padding-top: 12rem;
+  margin-top: 4rem;
+  padding-top: 3rem;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url('./images/bg.avif');
   background-size: cover;
   background-repeat: no-repeat;
   /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -36,17 +37,28 @@ html {
   font-weight: 700;
   color: white;
   background-color: black;
-  padding: 0 3rem;
-  margin-bottom: 5rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   border-bottom: 0.3rem solid whitesmoke;
   transform: skew(-5deg);
 }
+.person-container {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.image-wrapper {
+  width: 100%;
+}
+.person-wrapper {
+  width: 100%;
+}
 
 .person-img {
-  width: 25rem;
-  height: 25rem;
+  width: 35rem;
+  height: 35rem;
   object-fit: fill;
   border-radius: 50%;
   border: 0.2rem solid rgb(167, 166, 166);
@@ -57,19 +69,18 @@ html {
   font-weight: 600;
   color: rgb(207, 234, 163);
   background-color: rgb(0, 0, 0);
-  margin: 5rem 0;
-  padding: 0.5rem 3rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0.5rem;
   letter-spacing: 0.5rem;
 }
 
 .person-desc {
-  width: 70%;
-  font-size: 3rem;
+  width: 100%;
+  font-size: 1.8rem;
   font-weight: 500;
   color: rgb(207, 234, 163);
   background-color: black;
-  margin: 5rem 0;
-  padding: 2rem 3rem;
+  padding: 2rem 1.5rem;
   letter-spacing: 0.5rem;
   transition: text 0.3s 0.3s ease-in-out;
 }
@@ -80,7 +91,7 @@ html {
   color: black;
   background-color: whitesmoke;
   margin: 5rem 0;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   border: 0.5rem solid rgb(167, 166, 166);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -121,12 +132,15 @@ html {
 
 /* section2 */
 .services-container {
-  display: flex;
+  /* display: flex;
   /* flex-wrap: wrap; */
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center;
+  justify-content: space-between;*/
 
   padding: 7rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 .service {
   display: flex;
@@ -208,7 +222,7 @@ i {
 
 /* section4 */
 .section4 {
-  height: 100%;
+  height: 100vh;
   padding: 10rem 0;
   background-color: grey;
 }
@@ -224,19 +238,24 @@ i {
 .project-image {
   width: 100%;
   max-width: 700px;
-  height: 100;
+  height: 100%;
   border-radius: 3rem;
   cursor: pointer;
   border: 0.5rem solid rgb(81, 83, 84);
 }
 
 .projects-wrapper {
+  padding-top: 6rem;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .project {
   text-align: center;
+}
+.project-text {
+  color: whitesmoke;
 }
 
 .project-name {
@@ -291,7 +310,7 @@ i {
 }
 
 .contact-form {
-  width: 50rem;
+  width: 60rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,3 +361,148 @@ i {
   font-weight: 600;
 }
 /* section6 ends */
+
+@media (max-width: 1200px) {
+  .service-text {
+    width: 50%;
+    font-size: 2rem;
+  }
+  i {
+    text-align: center;
+  }
+  .service {
+    text-align: center;
+  }
+  .services-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section4 {
+    height: auto;
+  }
+  .project {
+    text-align: center;
+    padding: 6rem;
+  }
+  .projects-wrapper {
+    padding-top: 0rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .project-link {
+    font-size: 1.4rem;
+    color: white;
+
+    padding: 1.5rem 1rem;
+    border: 0.2rem solid rgb(81, 83, 84);
+  }
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  iframe {
+    width: 600px;
+    height: 300px;
+  }
+  .contact-form {
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+  .navbar {
+    justify-content: space-between;
+    padding: 0;
+    height: 5rem;
+  }
+  .navbar-link {
+    margin: 0 1rem;
+    padding: 0rem 2rem;
+    font-size: 1rem;
+  }
+  .person-img {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .person-name {
+    font-size: 2.5rem;
+  }
+
+  .person-desc {
+    font-size: 1.5rem;
+  }
+  .person-container {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .section1 {
+    margin-top: 4rem;
+    padding-top: 8rem;
+    width: 100%;
+    height: 100vh;
+  }
+  .section1-heading {
+    font-size: 4rem;
+  }
+
+  .projects-wrapper {
+    padding-top: 0rem;
+    grid-template-columns: 1fr;
+  }
+  .project-link {
+    font-size: 1.8rem;
+    color: white;
+
+    padding: 1.5rem 1rem;
+    border: 0.2rem solid rgb(81, 83, 84);
+  }
+  iframe {
+    width: 450px;
+    height: 300px;
+  }
+  .contact-form {
+    width: 50rem;
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+  iframe {
+    width: 350px;
+    height: 300px;
+  }
+  .contact-form {
+    width: 50rem;
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .section1-heading {
+  }
+  .progress-bar {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 400px) {
+  iframe {
+    width: 300px;
+    height: 300px;
+  }
+  .contact-form {
+    width: 40rem;
+    padding-top: 5rem;
+  }
+}
